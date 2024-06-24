@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.superherosmobile.R
 import com.example.superherosmobile.adapters.SuperHeroAdapter
 import com.example.superherosmobile.data.SuperHeroApiService
+import com.example.superherosmobile.data.SuperHeroListResponse
 import com.example.superherosmobile.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding:ActivityMainBinding
     lateinit var adapter: SuperHeroAdapter
+    lateinit var superheroList:List<SuperHeroListResponse>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -45,13 +48,11 @@ class MainActivity : AppCompatActivity() {
         val searchView = searchViewItem.actionView as SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
+                searchByName(query.orEmpty())
                 return false
             }
             override fun onQueryTextChange(newText: String?): Boolean {
-                if(newText != null) {
-                    searchByName("bat")
-                }
-                return true
+                return false
             }
         })
         return true
@@ -74,15 +75,21 @@ class MainActivity : AppCompatActivity() {
             try {
                 val apiService = getRetrofit().create(SuperHeroApiService::class.java)
                 val result = apiService.findSuperheroesByName(query)
-                //Hilo principal
                 runOnUiThread{
-                    adapter.updateData(result.results)
+                    if (result.results.isNullOrEmpty()) {
+                        // Mostrar mensaje de que no se encontraron resultados
+                        Toast.makeText(this@MainActivity, "No se encontraron resultados para '$query'", Toast.LENGTH_SHORT).show()
+                    } else {
+                        // Actualizar los datos del adaptador
+                        adapter.updateData(result.results)
+                        Log.i("HTTP", "${result.results}")
+                    }
                 }
-                Log.i("HTTP", "${result.results}")
-
-
             } catch (e: Exception) {
                 e.printStackTrace()
+                runOnUiThread {
+                    Toast.makeText(this@MainActivity, "Error al realizar la búsqueda", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
