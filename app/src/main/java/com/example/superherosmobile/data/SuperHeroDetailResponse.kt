@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 // Data class to represent the detailed response for a superhero
 data class SuperHeroDetailResponse(
+    @SerializedName("id") val id: String,
     @SerializedName("name") val name: String,
     @SerializedName("powerstats") val powerstats: PowerStatsResponse,
     @SerializedName("image") val image: SuperheroImageDetailResponse,

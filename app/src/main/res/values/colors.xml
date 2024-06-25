@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="stat_intelligence">#F44336</color>
+    <color name="stat_strength">#4CAF50</color>
+    <color name="stat_speed">#FFC107</color>
+    <color name="stat_durability">#00BCD4</color>
+    <color name="stat_power">#FF5722</color>
+    <color name="stat_combat">#A1AC38</color>
+
 </resources>
