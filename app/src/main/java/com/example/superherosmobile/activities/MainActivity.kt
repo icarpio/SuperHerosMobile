@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
                         // Actualizar los datos del adaptador
                         adapter.updateData(result.results)
                     }
+
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
