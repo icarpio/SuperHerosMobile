@@ -8,11 +8,7 @@
     <ImageView
         android:id="@+id/shImageView"
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="400dp"
-=======
-        android:layout_height="wrap_content"
->>>>>>> origin/main
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,13 +16,8 @@
     </ImageView>
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-<<<<<<< HEAD
         android:layout_height="500dp"
         android:layout_marginTop="350dp"
-=======
-        android:layout_height="600dp"
-        android:layout_marginTop="220dp"
->>>>>>> origin/main
         android:elevation="8dp"
         app:cardBackgroundColor="#034477"
         app:cardCornerRadius="42dp"
@@ -39,27 +30,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-<<<<<<< HEAD
-=======
-            <TextView
-                android:id="@+id/shNameTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                tools:text="SuperHero Name" />
-
->>>>>>> origin/main
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
                 android:layout_marginTop="20dp"
-=======
->>>>>>> origin/main
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -67,12 +42,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Real name: "
-<<<<<<< HEAD
                     android:textColor="@color/white"
                     android:textSize="20sp" />
-=======
-                    android:textColor="@color/white" />
->>>>>>> origin/main
 
                 <TextView
                     android:id="@+id/shBiographyTextView"
@@ -81,10 +52,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:textColor="@color/white"
-<<<<<<< HEAD
                     android:textSize="20sp"
-=======
->>>>>>> origin/main
                     tools:text="Name" />
 
             </LinearLayout>
@@ -93,27 +61,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-<<<<<<< HEAD
                 android:layout_marginTop="10dp"
-=======
->>>>>>> origin/main
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
-<<<<<<< HEAD
                     android:id="@+id/publisher"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Publisher: "
                     android:textColor="@color/white"
                     android:textSize="16sp" />
-=======
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Publisher: "
-                    android:textColor="@color/white" />
->>>>>>> origin/main
 
                 <TextView
                     android:id="@+id/shPublisherTextView"
@@ -121,7 +79,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:textColor="@color/white"
-<<<<<<< HEAD
                     android:textSize="16sp"
                     tools:text="Name publisher"
                     android:visibility="visible"/>
@@ -140,97 +97,52 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="16dp"
-=======
-                    tools:text="Name publisher" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="24dp"
->>>>>>> origin/main
                 android:gravity="bottom"
                 android:orientation="horizontal">
 
                 <View
                     android:id="@+id/viewIntelligence"
                     android:layout_width="0dp"
-<<<<<<< HEAD
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@color/stat_intelligence" />
-=======
-                    android:layout_height="50dp"
-                    android:background="@color/stat_intelligence"
-                    android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1" />
->>>>>>> origin/main
 
                 <View
                     android:id="@+id/viewStrength"
                     android:layout_width="0dp"
-<<<<<<< HEAD
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@color/stat_strength" />
-=======
-                    android:layout_height="20dp"
-                    android:background="@color/stat_strength"
-                    android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1" />
->>>>>>> origin/main
 
                 <View
                     android:id="@+id/viewSpeed"
                     android:layout_width="0dp"
-<<<<<<< HEAD
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@color/stat_speed" />
-=======
-                    android:layout_height="10dp"
-                    android:background="@color/stat_speed"
-                    android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1" />
->>>>>>> origin/main
 
                 <View
                     android:id="@+id/viewDurability"
                     android:layout_width="0dp"
-<<<<<<< HEAD
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@color/stat_durability" />
-=======
-                    android:layout_height="100dp"
-                    android:background="@color/stat_durability"
-                    android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1" />
->>>>>>> origin/main
 
                 <View
                     android:id="@+id/viewPower"
                     android:layout_width="0dp"
-<<<<<<< HEAD
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
                     android:background="@color/stat_power" />
-=======
-                    android:layout_height="60dp"
-                    android:background="@color/stat_power"
-                    android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1" />
->>>>>>> origin/main
 
                 <View
                     android:id="@+id/viewCombat"
                     android:layout_width="0dp"
-<<<<<<< HEAD
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="4dp"
                     android:layout_weight="1"
@@ -238,14 +150,6 @@
 
             </LinearLayout>
 
-=======
-                    android:layout_height="30dp"
-                    android:background="@color/stat_combat"
-                    android:layout_marginHorizontal="4dp"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
->>>>>>> origin/main
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -322,38 +226,24 @@
                     android:textSize="10sp" />
 
             </LinearLayout>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
             <TextView
                 android:id="@+id/connectionsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-<<<<<<< HEAD
                 android:layout_marginTop="20dp"
-=======
-                android:layout_marginTop="150dp"
->>>>>>> origin/main
                 android:layout_marginRight="20dp"
                 android:gravity="center_horizontal"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="Connections" />
-<<<<<<< HEAD
 
 
         </LinearLayout>
 
 
-=======
-        </LinearLayout>
-
-
-
->>>>>>> origin/main
     </androidx.cardview.widget.CardView>
 
 
