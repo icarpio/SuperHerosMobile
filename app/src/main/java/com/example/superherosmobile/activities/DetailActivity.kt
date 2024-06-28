@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
+import android.view.animation.ScaleAnimation
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.superherosmobile.R
@@ -15,6 +16,7 @@ import com.example.superherosmobile.data.PowerStatsResponse
 import com.example.superherosmobile.data.SuperHeroApiService
 import com.example.superherosmobile.data.SuperHeroDetailResponse
 import com.example.superherosmobile.databinding.ActivityDetailBinding
+import com.example.superherosmobile.utils.Animations
 import com.example.superherosmobile.utils.getRetrofit
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
@@ -37,6 +39,7 @@ class DetailActivity : AppCompatActivity() {
         val id: String = intent.getStringExtra(EXTRA_ID).orEmpty()
         Log.i("HEROE ID",id)
         getSuperheroInformation(id)
+
     }
     private fun getSuperheroInformation(id: String) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -61,6 +64,8 @@ class DetailActivity : AppCompatActivity() {
 
     private fun createUI(superhero:SuperHeroDetailResponse){
             Picasso.get().load(superhero.image.url).into(binding.shImageView)
+            //val anim = Animations()
+            //anim.scaleImage(binding.shImageView)
             binding.shBiographyTextView.text = superhero.biography.fullname
             binding.shPublisherTextView.text = superhero.biography.publisher
             // Reemplazar comas y punto y coma por saltos de línea en la cadena para obtener el texto formateado
