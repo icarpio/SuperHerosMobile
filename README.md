@@ -14,4 +14,4 @@ API de Superheroes: Utilizada para obtener información sobre los superhéroes (
 ViewBinding: Facilita la interacción con las vistas, eliminando la necesidad de llamadas repetitivas a findViewById.
 RecyclerView: Utilizado para mostrar listas de datos de manera eficiente y flexible.
 
-<img src="https://github.com/icarpio/SuperHerosMobile/blob/main/Main.png" width="250"/> <img src="https://github.com/icarpio/SuperHerosMobile/blob/main/Detail.png" width="250"/>
+<img src="https://github.com/icarpio/SuperHerosMobile/blob/main/Main.png" width="250"/> <img src="https://github.com/icarpio/SuperHerosMobile/blob/main/Detail1.png" width="250"/>
